@@ -1,0 +1,25 @@
+<div class="oj-hybrid-padding">
+  <h1>Statistic Report</h1>
+  <div class="oj-flex">
+    <div class="oj-flex-direction-cloumn" style="min-width: 200px; margin-left: 15px; margin-right: 15px">
+      <oj-label for="datePickerStart">Start</oj-label>
+      <oj-input-date class="oj-flex-item" id="datePickerStart" value={{dateValueStart}} converter=[[dateConverter]]
+        date-picker=[[datePickerStart]]>
+      </oj-input-date>
+    </div>
+    <div class="oj-flex-direction-cloumn" style="min-width: 200px; margin-left: 15px; margin-right: 15px">
+      <oj-label for="datePickerEnd">End</oj-label>
+      <oj-input-date class="oj-flex-item" id="datePickerEnd" value={{dateValueEnd}} converter=[[dateConverter]]
+        date-picker=[[datePickerEnd]]>
+      </oj-input-date>
+    </div>
+  </div>
+  <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+    <div id='chart-container'>
+      <oj-chart id="barChart" type="bar" orientation="[[orientationValue]]" stack="[[stackValue]]" series="[[barSeriesValue]]"
+        groups="[[barGroupsValue]]" animation-on-display="auto" animation-on-data-change="auto" hover-behavior="dim"
+        style="max-width:500px;width:100%;height:350px;">
+      </oj-chart>
+      <oj-toolbar id="myToolbar" aria-label="Chart Display Options Toolbar" aria-controls="barChart" style="max-width:500px;width:100%;"></oj-toolbar>
+    </div>
+  </div>
